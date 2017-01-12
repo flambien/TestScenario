@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_wBfLANivEeabnsMHXHEcLA" targetNamespace="http://tns.tibco.com/bw/composite/TestScenario.module" name="TestScenario.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_EHBV4NiwEeabnsMHXHEcLA" name="addparam1param2" promote="ComponentProcess/addparam1param2">
+    <sca:interface.wsdl xmi:id="_EHJ4wNiwEeabnsMHXHEcLA" interface="http://xmlns.example.com/20170112051325PLT#wsdl.interface(addparam1param2)" scaext:wsdlLocation="../Processes/testscenario/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_EHWGANiwEeabnsMHXHEcLA" name="RestService" path="/add?{param1}&amp;{param2}" docBasePath="http://localhost:7777/TestScenario.module" docResourcePath="Add" basePath="/" connector="testscenario.module.Add" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/testscenario.module.Process-Add.json">
+      <operation xmi:id="_EHblkNiwEeabnsMHXHEcLA" operationName="get" nickname="get-addparam1param2" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_EI92oNiwEeabnsMHXHEcLA">
+          <parameterMapping xmi:id="_EI-dsNiwEeabnsMHXHEcLA" parameterName="param1" parameterType="Query"/>
+          <parameterMapping xmi:id="_EI-dsdiwEeabnsMHXHEcLA" parameterName="param2" parameterType="Query"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_EI9PkNiwEeabnsMHXHEcLA"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_EHcMoNiwEeabnsMHXHEcLA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_w3u2gNivEeabnsMHXHEcLA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_w4K7YNivEeabnsMHXHEcLA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_w4VTcNivEeabnsMHXHEcLA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_w4coMNivEeabnsMHXHEcLA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_w4lLENivEeabnsMHXHEcLA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_w4qDkNivEeabnsMHXHEcLA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_w4x_YNivEeabnsMHXHEcLA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_wd4MENivEeabnsMHXHEcLA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_wd72cNivEeabnsMHXHEcLA" processName="testscenario.module.Process"/>
+    <sca:service xmi:id="_EG72UNiwEeabnsMHXHEcLA" name="addparam1param2">
+      <sca:interface.wsdl xmi:id="_EG9EcNiwEeabnsMHXHEcLA" interface="http://xmlns.example.com/20170112051325PLT#wsdl.interface(addparam1param2)" scaext:wsdlLocation="../Processes/testscenario/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
